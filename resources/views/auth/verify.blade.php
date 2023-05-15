@@ -1,4 +1,4 @@
-@extends('layouts.login-auth.master')
+@extends('web.layouts.login-auth.master')
 
 @section('content')
     <div class="container">

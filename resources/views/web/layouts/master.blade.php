@@ -19,11 +19,11 @@
     <div class="theme-layout">
         <div class="postoverlay"></div>
 
-        @include('layouts.web-auth.header')
+        @include('web.layouts.header')
 
-        @include('layouts.web-auth.chatbox')
+        {{-- @include('layouts.web.chatbox') --}}
 
-        @include('layouts.web-auth.sidebar-main')
+        {{-- @include('web.layouts.sidebar-main') --}}
 
         <section>
             <div class="gap gray-bg">
@@ -31,9 +31,9 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="row merged20" id="page-contents">
-                                @include('layouts.web-auth.sidebar-left')
+                                @include('web.layouts.sidebar-left')
                                 @yield('content')
-                                @include('layouts.web-auth.sidebar-right')
+                                @include('web.layouts.sidebar-right')
                                 <!-- sidebar -->
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </section>
-        @include('layouts.web-auth.footer')
+        @include('web.layouts.footer')
     </div>
 
 

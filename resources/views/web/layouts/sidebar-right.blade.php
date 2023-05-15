@@ -4,7 +4,7 @@
             <h4 class="widget-title">Your page</h4>
             <div class="your-page">
                 <figure>
-                    <a href="#" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+                    <a href="#" title=""><img src="{{asset('assets/images/resources/friend-avatar9.jpg')}}" alt=""></a>
                 </figure>
                 <div class="page-meta">
                     <a href="#" title="" class="underline">My page</a>
@@ -25,25 +25,25 @@
                                 week</a>
                             <div class="users-thumb-list">
                                 <a href="#" title="Anderw" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-1.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-1.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="frank" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-2.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-2.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Sara" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-3.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-3.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Amy" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-4.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-4.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Ema" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-5.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-5.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Sophie" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-6.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-6.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Maria" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-7.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-7.jpg')}}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -53,25 +53,25 @@
                                 this week</a>
                             <div class="users-thumb-list">
                                 <a href="#" title="Anderw" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-1.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-1.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="frank" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-2.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-2.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Sara" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-3.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-3.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Amy" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-4.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-4.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Ema" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-5.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-5.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Sophie" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-6.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-6.jpg')}}" alt="">
                                 </a>
                                 <a href="#" title="Maria" data-toggle="tooltip">
-                                    <img src="images/resources/userlist-7.jpg" alt="">
+                                    <img src="{{asset('assets/images/resources/userlist-7.jpg')}}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
             <ul id="people-list" class="friendz-list">
                 <li>
                     <figure>
-                        <img src="images/resources/friend-avatar.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar')}}.jpg" alt="">
                         <span class="status f-online"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -113,7 +113,7 @@
                 </li>
                 <li>
                     <figure>
-                        <img src="images/resources/friend-avatar2.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar2')}}.jpg" alt="">
                         <span class="status f-away"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -124,7 +124,7 @@
                 </li>
                 <li>
                     <figure>
-                        <img src="images/resources/friend-avatar3.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar3')}}.jpg" alt="">
                         <span class="status f-off"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -135,7 +135,7 @@
                 </li>
                 <li>
                     <figure>
-                        <img src="images/resources/friend-avatar4.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar4')}}.jpg" alt="">
                         <span class="status f-off"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -147,7 +147,7 @@
                 <li>
 
                     <figure>
-                        <img src="images/resources/friend-avatar5.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar5')}}.jpg" alt="">
                         <span class="status f-online"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -159,7 +159,7 @@
                 <li>
 
                     <figure>
-                        <img src="images/resources/friend-avatar6.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar6')}}.jpg" alt="">
                         <span class="status f-away"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -171,7 +171,7 @@
                 <li>
 
                     <figure>
-                        <img src="images/resources/friend-avatar7.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar7')}}.jpg" alt="">
                         <span class="status f-off"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -183,7 +183,7 @@
                 <li>
 
                     <figure>
-                        <img src="images/resources/friend-avatar5.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar5')}}.jpg" alt="">
                         <span class="status f-online"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -195,7 +195,7 @@
                 <li>
 
                     <figure>
-                        <img src="images/resources/friend-avatar2.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/friend-avatar2')}}.jpg" alt="">
                         <span class="status f-away"></span>
                     </figure>
                     <div class="friendz-meta">
@@ -217,7 +217,7 @@
                 <div class="chat-list">
                     <ul>
                         <li class="me">
-                            <div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
+                            <div class="chat-thumb"><img src="{{asset('assets/images/resources/chatlist1.jpg')}}" alt=""></div>
                             <div class="notification-event">
                                 <span class="chat-message-item">
                                     Hi James! Please remember to buy the food for
@@ -230,7 +230,7 @@
                             </div>
                         </li>
                         <li class="you">
-                            <div class="chat-thumb"><img src="images/resources/chatlist2.jpg" alt=""></div>
+                            <div class="chat-thumb"><img src="{{asset('assets/images/resources/chatlist2.jpg')}}" alt=""></div>
                             <div class="notification-event">
                                 <span class="chat-message-item">
                                     Hi James! Please remember to buy the food for
@@ -243,7 +243,7 @@
                             </div>
                         </li>
                         <li class="me">
-                            <div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
+                            <div class="chat-thumb"><img src="{{asset('assets/images/resources/chatlist1.jpg')}}" alt=""></div>
                             <div class="notification-event">
                                 <span class="chat-message-item">
                                     Hi James! Please remember to buy the food for
