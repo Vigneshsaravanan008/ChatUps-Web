@@ -51,14 +51,16 @@
         </div><!-- Shortcuts --> --}}
         <div class="inbox-navigation">
             <div class="inbox-panel-head">
-                <img alt="" src="{{ asset('assets/images/resources/friend-avatar11.jpg') }}">
+                <img alt=""
+                    src="{{ Auth::user()->image == null ? asset('assets/images/profile/male-icon.jpg') : asset('uploads/' . Auth::user()->image) }}">
                 <h1><i>{{ Auth::user()->name }}</i></h1>
+                <h5><i>{{ Auth::user()->passion == null ? 'Forward' : Auth::user()->passion }}</i></h5>
                 {{-- <a title="" href="edit-profile-basic.html"><i class="fa fa-user"></i>Profile</a>
                 <a title="" href="edit-account-setting.html"><i class="fa fa-cog"></i>Setting</a> --}}
-                <ul>
+                {{-- <ul>
                     <li><a class="compose-btn" title="" href="#"><i class="fa fa-user"></i> View Profile</a>
                     </li>
-                </ul>
+                </ul> --}}
             </div><!-- Inbox Panel Head -->
             <ul>
                 <li class="active"><a title=""><i class="fa fa-inbox"></i>Inbox</a><span>4</span></li>

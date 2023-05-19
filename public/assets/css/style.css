@@ -712,6 +712,7 @@ header.sticky {
     vertical-align: middle;
     position: relative;
     line-height: 60px;
+    max-width: 45px;
 }
 
 .top-area .user-img > span.status {
@@ -1302,7 +1303,7 @@ header.sticky {
 .central-meta {
     background: #fdfdfd none repeat scroll 0 0;
     border: 1px solid #ede9e9;
-    border-radius: 5px;
+    border-radius: 15px;
     display: inline-block;
     width: 100%;
     margin-bottom: 17px;
@@ -3840,7 +3841,7 @@ form .form-group.half:nth-child(2) {
 form .dob .form-group {
     display: inline-block;
     margin-right: 20px;
-    width: 30.6%;
+    width: 29.6%;
 }
 
 .chosen-container {
