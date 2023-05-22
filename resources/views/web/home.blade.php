@@ -4,7 +4,8 @@
         <div class="central-meta new-pst">
             <div class="new-postbox">
                 <figure>
-                    <img src="{{ asset('assets/images/resources/admin2.jpg') }}" alt="">
+                    <img src="{{ Auth::user()->image == null ? asset('assets/images/profile/male-icon.jpg') : asset('storage/' . Auth::user()->image) }}"
+                        alt="">
                 </figure>
                 <div class="newpst-input">
                     <form method="post">

@@ -24,7 +24,13 @@ return new class extends Migration
             $table->string('cover_image')->nullable();
             $table->string('about_me')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->integer('day')->nullable();
+            $table->integer('month')->nullable();
+            $table->integer('year')->nullable();
+            $table->string('city')->nullable();
             $table->string('password');
+            $table->bigInteger('followers')->default(0);
+            $table->bigInteger('following')->default(0);
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

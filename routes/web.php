@@ -24,11 +24,16 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::middleware(['web'])->group(function () {
+Route::middleware(['web', 'auth'])->group(function () {
     // Home
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     //Profile
     Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');
     Route::post('/profile/update', [UserController::class, 'profileupdate'])->name('user.update');
+    Route::post('/profile/upload', [UserController::class, 'profileupload'])->name('profile.upload');
+
+    //Password
+    Route::get('/settings/password', [UserController::class, 'changepassword'])->name('change.password');
+    Route::get('/password/update', [UserController::class, 'passwordupdate'])->name('password.update');
 });

@@ -1210,6 +1210,10 @@ header.sticky {
     width: 20%;
 }
 
+.sidebar .widget li .active {
+    color: #088dcd;
+}
+
 .sidebar .widget li {
     display: inline-block;
     margin-bottom: 20px;
@@ -10157,7 +10161,7 @@ aside.sidebar.full-style {
     margin-left: 250px;
 }
 
-.main-menu>div>.active {
-    border-bottom:2px solid blue;
-    width:12px;
+.main-menu > div > .active {
+    border-bottom: 2px solid blue;
+    width: 12px;
 }
