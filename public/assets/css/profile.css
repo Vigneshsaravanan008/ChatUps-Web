@@ -1,0 +1,23 @@
+.editing-info > button {
+    margin-bottom: 15px;
+}
+
+.card-img-top {
+    margin: 5px 0 5px 15px;
+    max-width: 35px;
+    max-height: 75px;
+    border-radius: 50%;
+}
+
+.work_info {
+    padding: 10px;
+}
+
+.company_name {
+    color: black;
+    font-weight: 600;
+}
+
+input[type="file"] {
+    outline: none;
+}

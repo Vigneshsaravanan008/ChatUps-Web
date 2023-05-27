@@ -5,7 +5,8 @@
                 <div class="widget">
                     <div class="foot-logo">
                         <div class="logo">
-                            <a href="index.html" title=""><img src="images/logo.png" alt=""></a>
+                            <a href="{{ url('/') }}" title=""><img src="{{ asset('assets/images/logo.png') }}"
+                                    alt=""></a>
                         </div>
                         <p>
                             The trio took this simple idea and built it into the world’s leading carpooling

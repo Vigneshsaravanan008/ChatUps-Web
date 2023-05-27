@@ -781,7 +781,7 @@ header.sticky {
 /*--- timeline area ---*/
 
 .feature-photo .container-fluid {
-    padding: 0 43px;
+    padding: 0 50px;
 }
 
 .feature-photo {
@@ -3273,9 +3273,8 @@ nav.breadcrumb {
 }
 
 .card {
-    border: medium none;
-    border-radius: 0;
-    margin-bottom: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .accordion .card h5 button {
@@ -3312,8 +3311,10 @@ nav.breadcrumb {
 }
 
 .card-body {
-    line-height: 30px;
+    /* line-height: 30px !important; */
     color: #888888;
+    padding:0;
+    font-size:14px;
 }
 
 .card-body ol,

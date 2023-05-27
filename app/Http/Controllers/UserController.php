@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Education;
 use App\Models\User;
 use App\Traits\ImageTrait;
 use Illuminate\Http\Request;
@@ -19,7 +20,6 @@ class UserController extends Controller
 
     public function profileupdate(Request $request)
     {
-        return $request;
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|unique:users,email,' . Auth::user()->id,
@@ -65,6 +65,35 @@ class UserController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Image Uploaded Successfully');
+    }
+
+    public function education()
+    {
+        return view('web.profile.education');
+    }
+
+    public function workupdate(Request $request)
+    {
+        $this->validate($request, [
+            'company' => 'required',
+            'position' => 'required',
+            'city' => 'required',
+            'description' => 'required'
+        ]);
+
+        $path = 'profile/education';
+        $files = request()->file('image');
+        $this->imageUpload($request, $path);
+
+        Education::create([
+            'company' => request('company'),
+            'position' => request('position'),
+            'city' => request('city'),
+            'description' => request('description'),
+            'image' => $path . $files->getClientOriginalName(),
+        ]);
+
+        return redirect()->back()->with('success', 'Work Details Updated Successfully');
     }
 
     public function changepassword()

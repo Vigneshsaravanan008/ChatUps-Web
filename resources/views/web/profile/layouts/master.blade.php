@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Profile | ChatUp</title>
+    <title>{{Auth::user()->name}}</title>
     <link rel="icon" href="{{ asset('assets/images/fav.png') }}" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="{{ asset('assets/css/main.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/color.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/profile.css') }}">
 
 </head>
 

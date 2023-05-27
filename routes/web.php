@@ -36,4 +36,8 @@ Route::middleware(['web', 'auth'])->group(function () {
     //Password
     Route::get('/settings/password', [UserController::class, 'changepassword'])->name('change.password');
     Route::get('/password/update', [UserController::class, 'passwordupdate'])->name('password.update');
+
+    //Education
+    Route::get('/education', [UserController::class, 'education'])->name('user.education');
+    Route::post('/work/update', [UserController::class, 'workupdate'])->name('user.work');
 });

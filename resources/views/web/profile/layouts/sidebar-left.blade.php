@@ -5,11 +5,11 @@
             <ul class="naves">
                 <li class="active">
                     <i class="ti-info-alt"></i>
-                    <a href="{{ route('user.profile') }}" title="">Basic info</a>
+                    <a href="{{ route('user.profile') }}" title="Profile">Profile</a>
                 </li>
                 <li>
                     <i class="ti-mouse-alt"></i>
-                    <a href="edit-work-eductation.html" title="">Education &
+                    <a href="{{ route('user.education') }}" title="Education">Education &
                         Work</a>
                 </li>
                 <li>
@@ -26,6 +26,6 @@
                     <a href="{{ route('change.password') }}" title="">change password</a>
                 </li>
             </ul>
-        </div><!-- settings widget -->
+        </div>
     </aside>
-</div><!-- sidebar -->
+</div>
