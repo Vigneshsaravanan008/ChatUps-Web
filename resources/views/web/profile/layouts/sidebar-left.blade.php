@@ -1,11 +1,11 @@
 <div class="col-lg-3">
     <aside class="sidebar static">
         <div class="widget stick-widget">
-            <h4 class="widget-title">Edit info</h4>
+            <h4 class="widget-title">About</h4>
             <ul class="naves">
                 <li class="active">
                     <i class="ti-info-alt"></i>
-                    <a href="{{ route('user.profile') }}" title="Profile">Profile</a>
+                    <a href="{{ route('user.overview', ['slug' => Auth::user()->name]) }}" title="Profile">Overview</a>
                 </li>
                 <li>
                     <i class="ti-mouse-alt"></i>

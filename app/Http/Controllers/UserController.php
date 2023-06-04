@@ -18,6 +18,21 @@ class UserController extends Controller
         return view('web.profile.info', compact('user'));
     }
 
+    public function overview($slug)
+    {
+        $education = Education::where('user_id', Auth::user()->id)->where('type', 2)->first();
+        return view('web.profile.overview', compact('education'));
+    }
+
+    public function relationshipStatus(Request $request)
+    {
+        User::where('id', Auth::user()->id)->update([
+            'relationship_status' => request('relationship_status'),
+        ]);
+
+        return redirect()->back()->with('success', 'Relationship Status Updated Successfully');
+    }
+
     public function profileupdate(Request $request)
     {
         $this->validate($request, [
@@ -69,7 +84,10 @@ class UserController extends Controller
 
     public function education()
     {
-        return view('web.profile.education');
+        $works = Education::where('user_id', Auth::user()->id)->where('type', 3)->get();
+        $colleges = Education::where('user_id', Auth::user()->id)->where('type', 2)->get();
+        $schools = Education::where('user_id', Auth::user()->id)->where('type', 1)->get();
+        return view('web.profile.education', compact('works', 'colleges', 'schools'));
     }
 
     public function workupdate(Request $request)
@@ -77,23 +95,82 @@ class UserController extends Controller
         $this->validate($request, [
             'company' => 'required',
             'position' => 'required',
-            'city' => 'required',
-            'description' => 'required'
+            'city' => 'required'
         ]);
 
-        $path = 'profile/education';
+        $path = 'profile/education/';
         $files = request()->file('image');
         $this->imageUpload($request, $path);
 
         Education::create([
+            'user_id' => Auth::user()->id,
             'company' => request('company'),
             'position' => request('position'),
             'city' => request('city'),
             'description' => request('description'),
             'image' => $path . $files->getClientOriginalName(),
+            'from_year' => request('from_year'),
+            'to_year' => request('to_year'),
+            'currently_working' => request('to_year') ? 1 : 0,
+            'type' => 3,
         ]);
 
         return redirect()->back()->with('success', 'Work Details Updated Successfully');
+    }
+
+    public function collegeupdate(Request $request)
+    {
+        $this->validate($request, [
+            'college' => 'required',
+            'degree' => 'required',
+            'image' => 'required'
+        ]);
+
+        $path = 'profile/education/';
+        $files = request()->file('image');
+        $this->imageUpload($request, $path);
+
+        Education::create([
+            'user_id' => Auth::user()->id,
+            'college' => request('college'),
+            'degree' => request('degree'),
+            'graduate' => request('graduate'),
+            'city' => request('city'),
+            'description' => request('description'),
+            'image' => $path . $files->getClientOriginalName(),
+            'from_year' => request('from_year'),
+            'to_year' => request('to_year'),
+            'type' => 2,
+        ]);
+
+        return redirect()->back()->with('success', 'College Details Updated Successfully');
+    }
+
+    public function schoolupdate(Request $request)
+    {
+        $this->validate($request, [
+            'school' => 'required',
+            'from_year' => 'required',
+            'city' => 'required',
+            'description' => 'required'
+        ]);
+
+        $path = 'profile/education/';
+        $files = request()->file('image');
+        $this->imageUpload($request, $path);
+
+        Education::create([
+            'user_id' => Auth::user()->id,
+            'school' => request('school'),
+            'city' => request('city'),
+            'description' => request('description'),
+            'image' => $path . $files->getClientOriginalName(),
+            'from_year' => request('from_year'),
+            'to_year' => request('to_year'),
+            'type' => 1,
+        ]);
+
+        return redirect()->back()->with('success', 'School Details Updated Successfully');
     }
 
     public function changepassword()

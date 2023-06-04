@@ -21,3 +21,21 @@
 input[type="file"] {
     outline: none;
 }
+
+.timeline-info .admin-name{
+    margin-right:100px;
+}
+
+.profile_nav_menu{
+    margin-left:100px;
+}
+
+.top_nav{
+    margin-bottom:10px;
+    margin-top:0;
+}
+
+h3
+{
+   color:#088dcd;
+}

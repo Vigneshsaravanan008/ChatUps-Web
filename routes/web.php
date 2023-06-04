@@ -39,5 +39,11 @@ Route::middleware(['web', 'auth'])->group(function () {
 
     //Education
     Route::get('/education', [UserController::class, 'education'])->name('user.education');
+
     Route::post('/work/update', [UserController::class, 'workupdate'])->name('user.work');
+    Route::post('/college/update', [UserController::class, 'collegeupdate'])->name('user.college');
+    Route::post('/school/update', [UserController::class, 'schoolupdate'])->name('user.school');
+
+    Route::get('/{slug}', [UserController::class, 'overview'])->name('user.overview');
+    Route::post('/relationshipStatus/update', [UserController::class, 'relationshipStatus'])->name('user.relationship_status');
 });

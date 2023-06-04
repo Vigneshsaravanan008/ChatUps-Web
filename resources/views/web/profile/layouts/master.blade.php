@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>{{Auth::user()->name}}</title>
+    <title>{{ Auth::user()->name }}</title>
     <link rel="icon" href="{{ asset('assets/images/fav.png') }}" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="{{ asset('assets/css/main.min.css') }}">
@@ -27,17 +27,15 @@
         <section>
             <div class="feature-photo">
                 <figure><img src="{{ asset('assets/images/resources/timeline-1.jpg') }}" alt=""></figure>
-                <div class="add-btn">
-                    <span>1205 followers</span>
-                    <a href="#" title="" data-ripple="">Add Friend</a>
+                <div class="text-end">
+                    <form class="edit-phto">
+                        <i class="fa fa-camera-retro"></i>
+                        <label class="fileContainer">
+                            Edit Cover Photo
+                            <input type="file">
+                        </label>
+                    </form>
                 </div>
-                <form class="edit-phto">
-                    <i class="fa fa-camera-retro"></i>
-                    <label class="fileContainer">
-                        Edit Cover Photo
-                        <input type="file" />
-                    </label>
-                </form>
                 <div class="container-fluid">
                     <div class="row merged">
                         <div class="col-lg-2 col-sm-3">
@@ -45,8 +43,8 @@
                                 <figure>
                                     <img src="{{ Auth::user()->image == null ? asset('assets/images/profile/male-icon.jpg') : asset('storage/' . Auth::user()->image) }}"
                                         alt="{{ Auth::user()->name }}">
-                                    <form method="POST" action="{{ route('profile.upload') }}" enctype="multipart/form-data"
-                                        class="image_upload_form edit-phto">
+                                    <form method="POST" action="{{ route('profile.upload') }}"
+                                        enctype="multipart/form-data" class="image_upload_form edit-phto">
                                         @csrf()
                                         <i class="fa fa-camera-retro"></i>
                                         <label class="fileContainer">
@@ -59,17 +57,44 @@
                         </div>
                         <div class="col-lg-10 col-sm-9">
                             <div class="timeline-info">
-                                <ul>
+                                {{-- <ul>
                                     <li class="admin-name">
-                                        <h5>{{ Auth::user()->name }}</h5>
-                                        <span>{{ Auth::user()->passion == null ? 'Forward' : '' }}</span>
+                                        <div class="row d-flex justify-content-between">
+                                            <h3>{{ Auth::user()->name }}</h3>
+                                        </div>
+                                        <h5>0 Friends</h5>
                                     </li>
+                                </ul>
+
+                                <hr>
+                                <ul>
                                     <li>
                                         <a class="" href="time-line.html" title="" data-ripple="">time
                                             line</a>
                                         <a class="" href="timeline-photos.html" title="" data-ripple="">Photos</a>
                                         <a class="" href="timeline-videos.html" title="" data-ripple="">Videos</a>
                                         <a class="" href="timeline-friends.html" title="" data-ripple="">Friends</a>
+                                        <a class="" href="groups.html" title="" data-ripple="">Groups</a>
+                                        <a class="" href="about.html" title="" data-ripple="">about</a>
+                                        <a class="active" href="#" title="" data-ripple="">more</a>
+                                    </li>
+                                </ul> --}}
+                                <ul>
+                                    <li class="admin-name">
+                                        <div class="row d-flex justify-content-between">
+                                            <h3>{{ Auth::user()->name }}</h3>
+                                        </div>
+                                        <h6>0 Friends</h6>
+                                    </li>
+                                    <li class="top_nav">
+                                        <a class="" href="time-line.html" title="" data-ripple="">time
+                                            line</a>
+                                        <a class="" href="timeline-photos.html" title=""
+                                            data-ripple="">Photos</a>
+                                        <a class="" href="timeline-videos.html" title=""
+                                            data-ripple="">Videos</a>
+                                        <a class="" href="timeline-friends.html" title=""
+                                            data-ripple="">Friends</a>
                                         <a class="" href="groups.html" title="" data-ripple="">Groups</a>
                                         <a class="" href="about.html" title="" data-ripple="">about</a>
                                         <a class="active" href="#" title="" data-ripple="">more</a>
@@ -88,7 +113,7 @@
                         <div class="col-lg-12">
                             <div class="row merged20" id="page-contents">
                                 @include('web.profile.layouts.sidebar-left')
-                                    @yield('content')
+                                @yield('content')
                                 @include('web.profile.layouts.sidebar-right')
                             </div>
                         </div>

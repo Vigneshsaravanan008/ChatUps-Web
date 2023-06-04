@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('password');
             $table->bigInteger('followers')->default(0);
             $table->bigInteger('following')->default(0);
+            $table->longText('relationship_status')->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

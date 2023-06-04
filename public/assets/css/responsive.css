@@ -17,7 +17,7 @@
         min-width: 211px;
         width: 211px;
     }
-    
+
     .page-infos > span {
         font-weight: 600;
     }
@@ -56,7 +56,7 @@
 
 @media screen and (max-width: 1600px) and (min-width: 1400px) {
     .user-avatar {
-        top: -33px;
+        top: -15px;
     }
     #people-list figure {
         width: 18.5%;
@@ -65,7 +65,7 @@
         right: 294px;
     }
     .edit-phto {
-        left: 315px;
+        left: 715px;
         bottom: 125px;
     }
     .add-btn {
